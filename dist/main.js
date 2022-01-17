@@ -1,0 +1,1 @@
+console.log("All your BasE ArE beLOng to US");
