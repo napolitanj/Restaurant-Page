@@ -29,13 +29,15 @@ function renderBody() {
     function photoFrame() {
 
         const frame = document.createElement("div");
-        createFrame.classList.add("bulkImage")
+        frame.classList.add("bulkImage")
 
         const featurePhoto = document.createElement("img");
         featurePhoto.src = "images/coverphoto.jpeg";
         featurePhoto.alt="feature photo";
 
         frame.appendChild(featurePhoto);
+
+        return frame;
     }
 
     function bodyText() {
@@ -51,30 +53,14 @@ function renderBody() {
         featureText.appendChild(button("Menu","navButton"))
         featureText.appendChild(button("Reservations","navButton"))
         featureText.appendChild(button("Contact","navButton"))
+
+        return featureText;
     }
 
-    createBody.appendChild(photoFrame());
     createBody.appendChild(bodyText());
+    createBody.appendChild(photoFrame());
 
     return createBody;
-}
-
-function createFooter() {
-    const footer = document.createElement("div");
-    footer.classList.add("footer");
-
-    footer.appendChild(paragraph("Restaurant Hours","fHeader"));
-    footer.appendChild(paragraph("Sunday: 10 a.m. - 10 p.m.","fText"));
-    footer.appendChild(paragraph("Monday: Closed","fText"));
-    footer.appendChild(paragraph("Tuesday: 12 a.m. - 10 p.m.","fText"));
-    footer.appendChild(paragraph("Wednesday: 12 a.m. - 10 p.m.","fText"));
-    footer.appendChild(paragraph("Thursday: 12 a.m. - 10 p.m.","fText"));
-    footer.appendChild(paragraph("Friday: 12 a.m. - 11 p.m.","fText"));
-    footer.appendChild(paragraph("Saturday: 10 a.m. - 11 p.m.","fText"));
-    footer.appendChild(paragraph("Located at:","fHeader"));
-    footer.appendChild(paragraph("9000 West Bridge Street, Windhelm, Skyrim 34294","fText"));
-
-    return footer;
 }
 
 function paragraph(text,pClass) {
@@ -93,7 +79,9 @@ function button(text,bClass) {
 }
 
 function homePage() {
-    
+    const active = document.getElementById("activePage");
+    active.appendChild(renderHome());
+    active.appendChild(renderBody());
 }
 
 export default homePage;

@@ -8,44 +8,53 @@ body {
     background:black;
     color:white;
     margin: 0px;
-    padding: 20px;
+    padding: 0px;
+    padding-left:100px;
     display:flex;
-    flex-direction:row;
+    align-items:flex-end;
     justify-content:space-between;
-    align-items:center;
-
+    flex-direction:row;
 }
 
 .logo {
-    margin-left:100px;
-    font-size:23px;
+    margin:20px;
+    font-size:25px;
     display:flex;
-    height:100px;
-    width:100px;
+    height:96px;
+    width:96px;
     background-color: grey;
     border-radius: 590px;
     text-align:center;
     justify-content:center;
     align-items:center;
     padding:20px;
-    text-shadow: black 2px 2px;
+    text-shadow: black 1px 1px;
+    border:solid white 4px;
 }
 
 .navigationWindow {
-    padding-right:80px;
+    padding-right:150px;
+    padding-left:20px;
     display:flex;
-    gap:10px;
+    gap:30px;
 }
 
 .navigation {
+    min-height:20px;
+    min-width:100px;
+    margin-bottom:-2px;
+    height:60px;
+    background-color:#222222;
     color:white;
-    padding:20px;
-    font-size:3vw;
+    padding:10px;
+    font-size:25px;
     text-decoration:none;
 }
 
 .navigation:hover {
-    color:#888888;
+    color:#777777;
+    background-color:#333333;
+    transform: translateY(-2px);
 }
 
 .backgroundImage {
@@ -56,6 +65,7 @@ body {
     display:flex;
     justify-content:center;
 }
+
 img {
     width:100%;
 }
@@ -64,7 +74,7 @@ img {
     position:absolute;
     text-align:center;
     margin:0;
-    top: 50%;
+    top: 40%;
     font-size:7vw;
     text-shadow:black 2px 2px;
     display:shrink;
@@ -74,12 +84,13 @@ img {
 .shade {
     width:100%;
     height:100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.7);
     position:absolute;
 }
 
 .bulk {
     display:flex;
+    flex-wrap:wrap;
     flex-direction:row;
     justify-content: center;
     align-items:center;
@@ -91,6 +102,9 @@ img {
 
 .bulkImage {
     margin:80px;
+    min-width:350px;
+    max-width:550px;
+
 }
 
 .bodytext {
@@ -104,9 +118,11 @@ img {
     flex-direction:column;
     justify-content: right;
     margin-right:30px;
+    margin:20px;
     gap:15px;
-    padding:15px;
+    padding:25px;
     background-color:rgba(7,7,7,0.5);
+    border:solid white 1px;
 }
 
 .navButton {
@@ -121,8 +137,9 @@ img {
     margin-top:10px;
 }
 
-.sexybutton:hover {
-    background-color:#22222222;
+.navButton:hover {
+    background-color:#444444;
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -136,4 +153,51 @@ img {
 .fHeader {
     font-size:28px;
     margin-top:60px;
+}
+
+.menuBackground {
+    position:relative;
+    text-align:center;
+    color:white;
+    font-family: 'promima-nova', sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.menuTitle {
+    position:relative;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:50px;
+    top: 5%;
+    font-size:7vw;
+    text-shadow:black 2px 2px;
+    text-size-adjust:auto;
+}
+
+.menu {
+    position:absolute;
+    margin:100px;
+    height:1500px;
+    width:800px;
+    background: rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.menuItem {
+    max-width:300px;
+    max-height:500px;
+    border:solid white 3px;
+    background-color:black;
+    gap:10px;
+    padding:10px;
+    margin:10px;
+}
+
+.menuBox {
+    display:flex;
+    flex-direction:row;
+    gap:30px;
 }
