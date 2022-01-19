@@ -48,11 +48,9 @@ function renderBody() {
         featureText.appendChild(paragraph(`At Leftovers, we're committed to providing you the evening of a lifetime. 
         Whether you're diving into our exquisitely delicious de-thawed turkey dinner frozen from last Thanksgiving, 
         or our signature "Whats-in-the-Fridge" salad, we promise to delight your palate.`,"bodytext"))
-        featureText.appendChild(paragraph('Bon Appétit!',"bodytext"))
+        featureText.appendChild(paragraph('Bon appétit!',"bodytext"))
 
-        featureText.appendChild(button("Menu","navButton"))
         featureText.appendChild(button("Reservations","navButton"))
-        featureText.appendChild(button("Contact","navButton"))
 
         return featureText;
     }
@@ -80,6 +78,7 @@ function button(text,bClass) {
 
 function homePage() {
     const active = document.getElementById("activePage");
+    active.textContent="";
     active.appendChild(renderHome());
     active.appendChild(renderBody());
 }

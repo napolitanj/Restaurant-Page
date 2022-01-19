@@ -1,5 +1,6 @@
 import homePage from "./home";
 import menuPage from "./menu";
+import contactPage from "./contact";
 
 //Header
 
@@ -12,32 +13,44 @@ function renderHeader() {
     createLogo.classList.add("logo");
     createLogo.textContent = "Leftovers";
 
-    const navigation = document.createElement("div");
-    navigation.classList.add("navigationWindow");
-
-    navigation.appendChild(navButton("Home","navigation"));
-    navigation.appendChild(navButton("Menu","navigation"));
-    navigation.appendChild(navButton("Contact","navigation"))
-
     createHeader.appendChild(createLogo);
-    createHeader.appendChild(navigation);
+    createHeader.appendChild(navigationMenu());
 
     return createHeader;
 }
 
-function navButton(text,pClass) {
+function navigationMenu() {
+    const navigation = document.createElement("div");
+    navigation.classList.add("navigationWindow");
 
-    const e = document.createElement("button");
-    e.textContent = text;
-    e.classList.add(pClass);
-    return e;
+    navigation.appendChild(navButton("Home","navigation","home"));
+    navigation.appendChild(navButton("Menu","navigation","menu"));
+    navigation.appendChild(navButton("Contact","navigation","contact"))
+
+    function navButton(text,pClass,page) {
+        const e = document.createElement("button");
+        e.textContent = text;
+        e.classList.add(pClass);
+        e.addEventListener("click", () => {
+            if (page === "home") {
+                homePage();
+            }
+           if (page === "menu") {
+               menuPage();
+           }
+           if (page === "contact") {
+                contactPage();
+            }
+        })
+        return e;
+    }
+    return navigation;
 }
 
 //Active Page
 function activePage() {
-    const active = document.createElement("page");
+    const active = document.createElement("main");
     active.setAttribute("id", "activePage");
-    
     return active;
 }
 
@@ -55,8 +68,6 @@ function renderFooter() {
     footer.appendChild(paragraph("Thursday: 12 a.m. - 10 p.m.","fText"));
     footer.appendChild(paragraph("Friday: 12 a.m. - 11 p.m.","fText"));
     footer.appendChild(paragraph("Saturday: 10 a.m. - 11 p.m.","fText"));
-    footer.appendChild(paragraph("Located at:","fHeader"));
-    footer.appendChild(paragraph("9000 West Bridge Street, Windhelm, Skyrim 34294","fText"));
 
     return footer;
 }
@@ -75,7 +86,8 @@ function renderWebsite() {
     content.appendChild(renderHeader());
     content.appendChild(activePage());
     content.appendChild(renderFooter());
+
+    homePage();
 }
 
 renderWebsite();
-menuPage();

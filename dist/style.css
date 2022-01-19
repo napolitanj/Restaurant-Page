@@ -2,6 +2,8 @@ body {
     font-family: 'promima-nova', sans-serif;
     margin: 0px;
     background:black;
+    display:flex;
+    padding:0px;
 }
 
 .header {
@@ -56,6 +58,12 @@ body {
     background-color:#333333;
     transform: translateY(-2px);
 }
+d
+.navigation:active {
+    color:#777777;
+    background-color:black;
+    transform:translateY(4px);
+}
 
 .backgroundImage {
     position:relative;
@@ -75,9 +83,8 @@ img {
     text-align:center;
     margin:0;
     top: 40%;
-    font-size:7vw;
+    font-size:70px;
     text-shadow:black 2px 2px;
-    display:shrink;
     text-size-adjust:auto;
 }
 
@@ -89,8 +96,8 @@ img {
 }
 
 .bulk {
+    position:relative;
     display:flex;
-    flex-wrap:wrap;
     flex-direction:row;
     justify-content: center;
     align-items:center;
@@ -98,43 +105,44 @@ img {
     background-color:#262626;
     color: white;
     font-size: 25px;
+    width:100%;
+    margin-right:0px;
 }
 
 .bulkImage {
-    margin:80px;
-    min-width:350px;
-    max-width:550px;
-
+    margin:50px;
+    width:50%;
 }
 
 .bodytext {
     margin-bottom:0px;
-    width:350px;
 }
 
 .textWindow {
     font-family: 'promima-nova', sans-serif;
     display:flex;
     flex-direction:column;
-    justify-content: right;
+    justify-content: center;
     margin-right:30px;
-    margin:20px;
-    gap:15px;
+    height:60%;
+    margin:50px;
     padding:25px;
-    background-color:rgba(7,7,7,0.5);
-    border:solid white 1px;
+    width:40%;
+    background-color:rgba(7,7,7);
+    border:solid grey 1px;
 }
 
 .navButton {
     font-family: 'promima-nova', sans-serif;
-    width: 350px;
+    width: 250px;
     text-align:center;
     background-color:black;
     color:white;
     padding:5px;
     border-radius:2px;
-    font-size:25px;
-    margin-top:10px;
+    font-size:30px;
+    margin-top:25px;
+    border-radius:2px;
 }
 
 .navButton:hover {
@@ -148,6 +156,7 @@ img {
     text-align:center;
     padding:10px;
     margin-bottom:50px;
+    position:relative;
 }
 
 .fHeader {
@@ -162,15 +171,18 @@ img {
     font-family: 'promima-nova', sans-serif;
     display:flex;
     justify-content:center;
+    max-height:1800px;
+    min-height:1600px;
+    width:auto;
 }
 
 .menuTitle {
     position:relative;
     text-align:center;
-    margin-top:10px;
-    margin-bottom:50px;
-    top: 5%;
-    font-size:7vw;
+    margin-top:30px;
+    margin-bottom:30px;
+    justify-content:center;
+    font-size:5vw;
     text-shadow:black 2px 2px;
     text-size-adjust:auto;
 }
@@ -178,26 +190,72 @@ img {
 .menu {
     position:absolute;
     margin:100px;
-    height:1500px;
-    width:800px;
+    height:auto;
+    width:900px;
     background: rgba(0,0,0,0.5);
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+    border-radius:3px;
 }
 
 .menuItem {
+    position:relative;
     max-width:300px;
     max-height:500px;
-    border:solid white 3px;
+    min-width:250px;
+    min-height:auto;
+    border:solid grey 3px;
     background-color:black;
-    gap:10px;
-    padding:10px;
+    padding:20px;
     margin:10px;
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:50px;
 }
 
 .menuBox {
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.menuPic {
+    max-height:200px;
+}
+
+.contactBody {
+    background-color:#222222;
+    height:500px;
     display:flex;
     flex-direction:row;
-    gap:30px;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.contactImage {
+    height:auto;
+    width:50%;
+}
+
+.contactText {
+    height:400px;
+    background-color:black;
+    color: white;
+    font-family: 'promima-nova', sans-serif;
+    font-size: 18px;
+    text-align:left;
+}
+
+.contactHeader {
+    margin:10px;
+    color: white;
+    font-family: 'promima-nova', sans-serif;
+    font-size: 24x;
+    text-align:left; 
 }
