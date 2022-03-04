@@ -1,3 +1,5 @@
+LIVE DEMO: https://napolitanj.github.io/restaurant-page/
+
 Restaurant Page
 
 This page is for The Odin Project's Restaurant Page Project.
